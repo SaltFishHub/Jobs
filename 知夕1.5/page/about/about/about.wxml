@@ -1,0 +1,49 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">关于</view>
+</cu-custom>
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-purple '></text> 策划工作[飞书]
+  </view>
+</view>
+<text>
+翁立佳：玩法方向
+袁恒一：数值方向
+王诗斌：美术方向
+</text>
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-purple '></text> 会议编排[飞书]
+  </view>
+</view>
+
+<text>
+翁立佳：备用工具人
+王诗斌：工具人二号
+袁恒一：薛定谔的工具人
+</text>
+
+<text>
+后端代码[Go/Redis]
+翁立佳：后端主程
+袁恒一：后端副程
+</text>
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-purple '></text> 分工
+  </view>
+</view>
+
+<text>
+前端代码[微信开发者工具/Git]
+袁恒一：前端主程
+王诗斌：前端副程
+
+美术工作[Ps/路过图床]
+王诗斌：美术主笔
+
+文档、代码编排[Word/Ps]
+王诗斌：文档主编
+</text>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "daily": "/pages/daily/home/home",
+    "order": "/pages/order/home/home",
+    "discover": "/pages/discover/home/home",
+    "store": "/pages/store/home/home",
+    "about": "/pages/about/home/home"
+  }
+}

@@ -1,0 +1,33 @@
+.UCenter-bg {
+
+  background-size: cover;
+  height: 550rpx;
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.UCenter-bg text {
+  opacity: 0.8;
+}
+
+.UCenter-bg image {
+  width: 500rpx;
+  height: 500rpx;
+}
+.btnLayout{
+  display: flex;
+  flex-direction: row;
+}
+.button{
+  width: 45%;
+}
+.text{
+  color:red;
+}

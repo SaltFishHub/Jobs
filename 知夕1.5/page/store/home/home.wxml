@@ -1,0 +1,86 @@
+<swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{3}}" wx:key>
+    <image src="/images/Store_{{index+1}}.jpg" class="jpg" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+
+
+<scroll-view scroll-x class="bg-white nav text-center ">
+  <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{tabNav}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+    {{tabNav[index]}}
+  </view>
+</scroll-view>
+
+
+
+<view class="bg-white padding"></view>
+
+
+<block wx:if="{{TabCur==0}}">
+  <view wx:for="{{medicinelist}}" wx:key="{{index}}" class="solids-bottom flex align-center ">
+    <view class="cu-card article" bindtap="medicineuse{{index}}">
+      <view class="cu-item shadow">
+        <view class="title">
+          <view class="text-cut ">{{item.name}}</view>
+        </view>
+        <view class="content">
+          <image src="/images/medicine_0{{index+1}}.png" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content">{{item.desc}}</view>
+            <view class="flex solid-bottom padding-sm justify-end">
+              <view class="cu-tag bg-yellow light sm round">售价：{{item.price}}</view>
+              <view class="cu-tag bg-green light sm round">剩余数目</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="padding"></view>
+  <view class="padding"></view>  
+</block>
+
+
+
+
+<block wx:if="{{TabCur==1}}">
+  <view wx:for="{{chiplist}}" wx:key="{{index}}" class="solids-bottom flex align-center ">
+    <view class="cu-card article" bindtap="buyPiece" id="{{index}}">
+      <view class="cu-item shadow">
+        <view class="title">
+          <view class="text-cut ">{{item.name}}</view>
+        </view>
+        <view class="content">
+          <image src="{{item.url}}" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content">{{item.desc}}</view>
+            <view class="flex solid-bottom padding-sm justify-end">
+              <view class="cu-tag bg-yellow light sm round">售价：{{item.price}}</view>
+              <view class="cu-tag bg-green light sm round">已拥有：{{item.number}}</view>
+              <view class="cu-tag bg-red light sm round">点击购买</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="padding"></view>
+  <view class="padding"></view>
+</block>
+
+
+
+<block wx:if="{{TabCur==2}}">
+  <view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-grey '></text> 素材扩展,敬请期待.
+  </view>
+</view>
+<view class="grid col-1 padding-sm">
+  <view class="margin-tb-sm text-center" wx:for="{{3}}" wx:key >
+    <button class="cu-btn  line-cyan {{shadow?'shadow':''}}">
+    多样元素，不一样的学习时光。
+    </button>
+  </view>
+</view>
+</block>

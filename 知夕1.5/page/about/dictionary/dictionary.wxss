@@ -1,0 +1,21 @@
+/*
+自定义小图片
+*/
+.logoimage {
+  width: 50rpx;
+  height: 40rpx;
+  margin: 10rpx 20rpx 0rpx 0rpx;
+  float: left;
+}
+.chipimage {
+  width: 300rpx;
+  height: 240rpx;
+  margin: 10rpx 20rpx 0rpx 0rpx;
+  float: left;
+}
+.monsimage {
+  width: 450rpx;
+  height: 360rpx;
+  margin: 10rpx 20rpx 0rpx 0rpx;
+  float: left;
+}

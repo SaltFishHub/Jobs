@@ -1,0 +1,124 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg">
+  <view slot="content">今天也是自律的一天</view>
+</cu-custom>
+
+
+
+<view class="cu-list menu card-menu  margin-bottom-xl shadow-lg radius">
+
+  <view class="solids-bottom padding-xs flex align-center">
+
+    <view class=" padding-sm margin-xs radius">
+      <view class="cu-avatar xl round " style="background-image:url({{AvatarUrl}});"></view>
+    </view>
+
+
+    <view class="flex-sub text-center">
+
+      <view class="flex solid-bottom padding align-center">
+        <view class="cu-tag line-green">Lv{{Level}}</view>
+        <view class="cu-progress  lg {{active?'active':''}} margin-left-sm  ">
+          <view class="bg-green" style="width:{{Esp}}%">{{Esp}}%</view>
+        </view>
+      </view>
+
+
+      <view class="padding flex flex-wrap justify-between align-center">
+        <image class="logoimage" src="/images/name.png" mode='aspectFill'></image>
+        <open-data type="userNickName"></open-data>
+        <image class="logoimage" src="/images/money.png" mode='aspectFill'></image>
+        <view>{{Soul}}</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="padding bg-white">
+    <view class="cu-progress round striped active">
+      <view class="bg-red" style="width:{{LifePoint}}%;">{{LifePoint}}/100</view>
+    </view>
+  </view>
+
+
+  <view class="cu-item arrow">
+    <button class="cu-btn content" bindtap="showModal">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">创建番茄钟</text>
+    </button>
+  </view>
+
+</view>
+
+
+
+<view class='nav-list'>
+
+  <navigator open-type="navigate" hover-class='none' url='/pages/discover/timer/timer?creTime={{item.creTime}}&time={{item.time}}' class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key="elements" bindlongpress="modalCandel" data-index="{{index}}">
+
+
+    <view class="nav-title">{{item.title}}</view>
+    <view class="nav-name">{{item.describe}}</view>
+    <view class="nav-name">{{item.time}}</view>
+
+
+  </navigator>
+</view>
+
+
+
+<view class="cu-tabbar-height"></view>
+
+
+
+
+
+
+<view class="cu-modal {{modalName=='creatClock'?'show':''}}" bindtap="hideModal">
+
+  <view class="cu-dialog" catchtap>
+    <view class="cu-dialog">
+
+      
+        <view  style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big91012.jpg');height:20px;" mode="aspectFill"></view>
+      
+
+
+      <form bindsubmit='setInputValue'>
+
+        <view class="cu-form-group">
+          <view class="flex  justify-start">
+            <text class="cuIcon-title text-orange "></text>
+            <input type='text' name='title' placeholder="事件" value="{{contain.title}}"></input>
+          </view>
+        </view>
+
+        <input type='text' name='describe' placeholder="描述" placeholder-style="text-align: start " value="{{contain.describe}}"> </input>
+
+        <view class="cu-bar bg-white grid col-5">
+      
+          <view class="  radius text-grey text-lg bg-white " form-type='reset'>重置</view>
+          <button class="action margin-0 flex-sub  text-green text-lg bg-white " form-type='submit' bindtap="modalConfirm">创建</button>
+        </view>
+
+      </form>
+
+
+      <view class="grid col-5 padding-sm">
+        <view class="margin-tb-sm text-center" wx:for="{{Color_Chose}}" class="padding-xs" wx:key="{{index}}">
+          <view class=" round line-{{item.name}}  bg-{{item.checked?item.name:white}} shadow " bindtap="ColorCheckbox" data-value="{{item.name}}">{{item.title}}</view>
+        </view>
+      </view>
+
+
+      <view class="cu-form-group">
+        <view class="title">时间选择</view>
+        <picker mode="time" value="{{time}}" bindchange="TimeChange">
+          <view class="picker">
+            {{time}}
+          </view>
+        </picker>
+      </view>
+
+    </view>
+  </view>
+</view>

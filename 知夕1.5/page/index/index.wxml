@@ -1,0 +1,51 @@
+<daily wx:if="{{PageCur=='daily'}}">
+</daily>
+<order wx:if="{{PageCur=='order'}}"></order>
+<discover wx:if="{{PageCur=='discover'}}"></discover>
+<store wx:if="{{PageCur=='store'}}"></store>
+<about wx:if="{{PageCur=='about'}}"></about>
+
+
+
+<view class="cu-bar tabbar bg-white shadow foot">
+
+
+  <view class="action" bindtap="NavChange" data-cur="daily">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-write{{PageCur=='daily'?'fill':''}} lg text-{{PageCur=='daily'?'cyan':'gray'}}"></text>
+    </view>
+    <view class="{{PageCur=='daily'?'text-green':'text-gray'}}">日常</view>
+  </view>
+
+
+  <view class="action" bindtap="NavChange" data-cur="order">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-favor{{PageCur=='order'?'fill':''}} lg text-{{PageCur=='order'?'yellow':'gray'}}"></text>
+    </view>
+    <view class="{{PageCur=='order'?'text-green':'text-gray'}}">招募</view>
+  </view>
+
+
+  <view class="action text-gray add-action" bindtap="creclock" data-cur="discover">
+    <button class="cu-btn cuIcon-countdown{{PageCur=='discover'?'fill':''}} lg text-red shadow"></button>
+    <view class="{{PageCur=='discover'?'text-green':'text-gray'}}">探索</view>
+  </view>
+
+
+  <view class="action" bindtap="NavChange" data-cur="store">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-shop{{PageCur=='store'?'fill':''}} lg text-{{PageCur=='store'?'blue':'gray'}}"></text>
+    </view>
+    <view class="{{PageCur=='store'?'text-green':'text-gray'}}">商店</view>
+  </view>
+
+
+  <view class="action" bindtap="NavChange" data-cur="about">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-upstage{{PageCur=='about'?'fill':''}} lg text-{{PageCur=='about'?'orange':'gray'}}"></text>
+    </view>
+    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">成就</view>
+  </view>
+
+
+</view>

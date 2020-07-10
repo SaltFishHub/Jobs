@@ -1,0 +1,114 @@
+<view class="UCenter-bg">
+  <view class="padding"></view>
+  <view class="padding"></view>
+  <view class="padding"></view>
+  <view class="padding"></view>
+  <view class="padding"></view>
+  <view class="padding"></view>
+  <view class="text-xl">每一分，进一步 ！
+    <text class="text-df">v0.7</text>
+  </view>
+  <view class="margin-top-sm">
+    <text>By:知夕团队</text>
+  </view>
+</view>
+
+
+
+<view class="cu-modal bottom-modal {{warrant==0?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+      <view class="action text-blue" bindtap="hideModal">取消</view>
+      <button open-type='getUserInfo' bindgetuserinfo='userinfo'>确定</button>
+    </view>
+    <view class="padding-xl">
+      微信授权来支持招募和云存档
+    </view>
+  </view>
+</view>
+
+<view class="padding flex text-center text-grey bg-white shadow-warp">
+
+  <view class="flex flex-sub flex-direction solid-right">
+    <view class="text-xxl text-orange">{{visitTotal}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-attentionfill"></text>活跃</view>
+  </view>
+
+
+  <view class="flex flex-sub flex-direction solid-right">
+    <view class="text-xxl text-blue">{{starCount}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-favorfill"></text>境界</view>
+  </view>
+
+
+  <view class="flex flex-sub flex-direction">
+    <view class="text-xxl text-green">{{forksCount}}%</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-fork"></text>图鉴</view>
+  </view>
+</view>
+
+
+
+
+
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/dictionary/dictionary" hover-class="none">
+      <text class='cuIcon-vipcard'></text>
+      <text class="text-grey">图鉴</text>
+    </navigator>
+  </view>
+
+
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/history/history" hover-class="none">
+      <image src="/images/temp1.png" class="png" mode="aspectFit"></image>
+      <text class="text-grey">数据统计</text>
+    </navigator>
+  </view>
+
+  <view class="cu-item arrow">
+    <view class="content" bindtap="showQrcode">
+      <text class="cuIcon-appreciatefill text-red"></text>
+      <text class="text-grey">赞助支持</text>
+    </view>
+  </view>
+
+
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/about/about" hover-class="none">
+      <text class="cuIcon-creativefill text-orange"></text>
+      <text class="text-grey">关于</text>
+    </navigator>
+  </view>
+
+
+  <view class="cu-item arrow">
+    <view class="content" bindtap="upload_user">
+      <text class="cuIcon-formfill text-green"></text>
+      <text class="text-grey">上传存档</text>
+    </view>
+  </view>
+
+
+  <view class="cu-item arrow">
+    <view class="content" bindtap="download_user">
+      <text class="cuIcon-formfill text-green"></text>
+      <text class="text-grey">导入存档</text>
+    </view>
+  </view>
+
+
+  <view class="cu-item arrow">
+    <view class="content" bindtap="testclear">
+      <text class="cuIcon-formfill text-green"></text>
+      <text class="text-grey">清除本地缓存</text>
+    </view>
+  </view>
+</view>
+<view class="cu-tabbar-height"></view>

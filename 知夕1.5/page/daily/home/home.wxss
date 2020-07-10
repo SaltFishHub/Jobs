@@ -1,0 +1,70 @@
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}
+input {
+	text-align: start; /*输入字-光标 靠前 */
+	padding-left: 15px; /*开始间隔*/
+}
+
+.image {
+  width: 150rpx;
+  height: 120rpx;
+  margin: 10rpx 20rpx 0rpx 0rpx;
+  float: left;
+}
+.logoimage {
+  width: 50rpx;
+  height: 40rpx;
+  margin: 10rpx 20rpx 0rpx 0rpx;
+  float: left;
+}
+.UCenter-bg {
+  background-image: url(https://image.weilanwl.com/color2.0/index.jpg);
+  background-size: cover;
+  height: 300rpx;
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/*
+旋转方块动画
+*/
+.animationSlow {
+   width: 100rpx;
+  height: 100rpx;
+  background-color: orange;
+  animation-name: myfirst; /*动画的名称 */
+  animation-duration: 2000ms; /*动画从开始到结束的时间*/
+  animation-timing-function: linear; /*动画执行快慢的参数*/
+  animation-iteration-count: infinite; /*动画执行多少次的参数*//*以下是兼容ios所需，参数意义与上相同*/
+  -webkit-animation-name: myfirst;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes myfirst {
+  /*开始转的角度*/
+  from {
+    transform: rotate(0deg);
+  }/*结束的角度*/
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*兼容ios*/
+@-webkit-keyframes myfirst {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

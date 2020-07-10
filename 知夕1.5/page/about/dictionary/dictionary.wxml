@@ -1,0 +1,39 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">图鉴</view>
+</cu-custom>
+
+
+
+
+
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-orange '></text> 碎片
+  </view>
+</view>
+<view class="grid col-3 margin-bottom text-center">
+  <view wx:for="{{urlchip}}" wx:key="{{urlchip}}">
+      <view>
+        <image class="chipimage" src="{{item.url}}" mode='aspectFill'></image>
+        <view class="cu-btn  line-pink">{{item.name}}</view>
+      </view>
+  </view>
+</view>
+
+
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-purple '></text> 山海兽
+  </view>
+</view>
+<view class="grid col-2 margin-bottom text-center">
+  <view wx:for="{{urlmonster}}" wx:key="{{urlmonster}}">
+    <view>
+      <image class="monsimage" src="{{item.islock?item.url:item.burl}}" mode='aspectFill'></image>
+      <view class="cu-btn  line-green">{{item.name}}</view>
+    </view>
+  </view>
+</view>

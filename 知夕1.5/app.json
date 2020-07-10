@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/daily/home/home",
+    "pages/order/home/home",
+    "pages/discover/home/home",
+    "pages/store/home/home",
+    "pages/about/home/home",
+    "pages/about/history/history",
+    "pages/about/about/about",
+    "pages/discover/timer/timer",
+    "pages/about/dictionary/dictionary",
+    "pages/discover/score/score"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

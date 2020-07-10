@@ -1,0 +1,30 @@
+
+
+
+.bg-img {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.image{
+  height:50em;
+  width:50px;
+}
+.logoimage {
+  background-size: cover;
+  height:100px;
+}
+
+.cu-form-group {
+  background-color: var(--white);
+  padding: 1rpx 30rpx;
+  display: flex;
+  align-items: center;
+  min-height: 100rpx;
+  justify-content: space-between;
+}
+
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}
