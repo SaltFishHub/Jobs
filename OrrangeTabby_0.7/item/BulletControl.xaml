@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="OrrangeTabby_0._7.item.BulletControl"
+             x:Name="main"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OrrangeTabby_0._7.item"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="{Binding FontSize,ElementName=main}"/>
+            <Setter Property="Foreground" Value="{Binding Foreground,ElementName=main}"/>
+            <Setter Property="FontFamily" Value="{Binding FontFamily,ElementName=main}"/>
+        </Style>
+    </UserControl.Resources>
+    <!--用ScrollViewer封装，这样文字在超出canvas后不会显示-->
+    <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+        <Canvas x:Name="screen" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  >
+            <!--用于在初始化时,获取到弹幕的高度-->
+            <TextBlock x:Name="InitBlock" Visibility="Visible" Text="" Padding="0"  Canvas.Top="82" Canvas.Left="769" Loaded="InitBlock_Loaded"></TextBlock>
+        </Canvas>
+    </ScrollViewer>
+</UserControl>

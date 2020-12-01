@@ -1,0 +1,9 @@
+﻿<Application x:Class="OrrangeTabby_0._7.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:OrrangeTabby_0._7"
+             StartupUri="Homepage.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

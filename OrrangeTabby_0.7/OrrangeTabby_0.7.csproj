@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{995CBA0D-C257-44C6-905B-046994130B27}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OrrangeTabby_0._7</RootNamespace>
+    <AssemblyName>OrrangeTabby_0.7</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="item\BaseWindow.xaml.cs">
+      <DependentUpon>BaseWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Homepage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Homepage.xaml.cs">
+      <DependentUpon>Homepage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="item\BaseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="item\BulletControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Player.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="item\BulletControl.xaml.cs">
+      <DependentUpon>BulletControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="item\Direct.cs" />
+    <Compile Include="item\FeijuSocket.cs" />
+    <Compile Include="item\MouseHelper.cs" />
+    <Compile Include="Player.xaml.cs">
+      <DependentUpon>Player.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="item\01_close.png" />
+    <Resource Include="item\02_a_exp.png" />
+    <Resource Include="item\02_b_return.png" />
+    <Resource Include="item\03_hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\17_fresh.png" />
+    <Resource Include="resource\18_share.png" />
+    <Content Include="resource\TESTVEDIO.mp4" />
+    <Resource Include="config\Logo.png" />
+    <Resource Include="resource\11_speed.gif" />
+    <Resource Include="resource\16_expand.png" />
+    <Resource Include="resource\13_bullet.png" />
+    <Resource Include="resource\10_play.png" />
+    <Resource Include="resource\100_play.png" />
+    <Resource Include="resource\101_stop.png" />
+    <Resource Include="resource\12_emoji.png" />
+    <Content Include="resource\temp.gif" />
+    <Resource Include="resource\15_set.png" />
+    <Resource Include="resource\14_voice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="config\icon\Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\01_close.png" />
+    <Resource Include="resource\02_a_exp.png" />
+    <Resource Include="resource\02_b_return.png" />
+    <Resource Include="resource\03_hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\00_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\04_divide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="script\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
